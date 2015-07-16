@@ -57,7 +57,7 @@ chmod -R 755 /opt/core/var/mdata-setup/includes/*
 echo "* Cleaning up."
 pkgin -y rm gcc47 gmake
 
-rm -rf /root/*
+
 
 # Prepare image for provisioning
 sm-prepare-image -y
