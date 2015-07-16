@@ -36,6 +36,7 @@ fping
 nmap
 sqlite3
 libssh2
+curl
 
 ## For build
 gcc47

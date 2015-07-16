@@ -48,6 +48,8 @@ chown zabbix:zabbix /var/lib/sqlite/zabbix.db
 
 # Clean up
 echo "* Cleaning up."
+pkg -y rm gcc47 gmake
+pkg -y autoremove
 rm -rf /root/*
 
 # Prepare image for provisioning
