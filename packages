@@ -35,6 +35,7 @@ net-snmp
 fping
 nmap
 sqlite3
+libssh2
 
 ## For build
 gcc47
