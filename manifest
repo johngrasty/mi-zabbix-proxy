@@ -1,0 +1,7 @@
+name="zabbix-proxy"
+organization="Joyent"
+brand="Instance"
+version="1.0.0"
+description="Description for image zabbix-proxy"
+homepage="http://wiki.joyent.com/jpc2/zabbix-proxy+Instance"
+users="root admin"
