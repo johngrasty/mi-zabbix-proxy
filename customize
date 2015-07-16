@@ -38,12 +38,14 @@ make install
 
 echo "* Initializing sqlite database"
 cd database/sqlite3
-sqlite3 /var/lib/sqlite/zabbix.db < schema.sql
+mkdir /var/db/sqlite
+touch /var/db/sqlite/zabbix.db
+sqlite3 /var/db/sqlite/zabbix.db < schema.sql
 
 echo "* Adding log for zabbix and setting permissions"
 touch /var/log/zabbix_proxy.log
 chown zabbix:zabbix /var/log/zabbix_proxy.log
-chown zabbix:zabbix /var/lib/sqlite/zabbix.db
+chown zabbix:zabbix /var/db/sqlite/zabbix.db
 
 
 # Clean up

@@ -37,6 +37,7 @@ nmap
 sqlite3
 libssh2
 curl
+libiconv
 
 ## For build
 gcc47
