@@ -30,6 +30,9 @@ echo "* Building zabbix-proxy"
 cd ~
 wget http://sourceforge.net/projects/zabbix/files/ZABBIX%20Latest%20Stable/${ZABBIX_VERSION}/zabbix-${ZABBIX_VERSION}.tar.gz/download
 tar -zxvf zabbix-${ZABBIX_VERSION}.tar.gz 
+
+cd zabbix-${ZABBIX_VERSION}
+
 ./configure --enable-proxy --enable-agent --with-sqlite3=/opt/local --with-fping --with-jabber=/opt/local --with-libxml2 --with-net-snmp --with-ssh2=/opt/local  --with-libcurl --prefix=/opt/zabbix --with-iconv==/opt/local
 make install
 
