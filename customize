@@ -9,6 +9,7 @@ set -o errexit
 
 # Variables
 PKGSRC_VERSION='2015Q1'
+ZABBIX_VERSION='2.4.5'
 
 # Ensure we have updated standard packages
 echo "* Updating standard packages.";
@@ -20,6 +21,27 @@ echo "* Configuring image specific packages.";
 
 echo "* Create rsyslog.d folder for extra configuration files"
 mkdir -p /opt/local/etc/rsyslog.d
+
+echo "* Adding user and group for zabbix"
+groupadd zabbix
+useradd -m -g zabbix zabbix
+
+echo "* Building zabbix-proxy"
+cd ~
+wget http://sourceforge.net/projects/zabbix/files/ZABBIX%20Latest%20Stable/${ZABBIX_VERSION}/zabbix-${ZABBIX_VERSION}.tar.gz/download
+tar -zxvf download 
+./configure --enable-proxy --enable-agent --with-sqlite3=/opt/local --with-fping --with-jabber=/opt/local --with-libxml2 --with-net-snmp --with-ssh2=/opt/local  --with-libcurl --prefix=/opt/zabbix --with-iconv==/opt/local
+make install
+
+echo "* Initializing sqlite database"
+cd database/sqlite3
+sqlite3 /var/lib/sqlite/zabbix.db < schema.sql
+
+echo "* Adding log for zabbix and setting permissions"
+touch /var/log/zabbix_proxy.log
+chown zabbix:zabbix /var/log/zabbix_proxy.log
+chown zabbix:zabbix /var/lib/sqlite/zabbix.db
+
 
 # Clean up
 echo "* Cleaning up."
