@@ -23,8 +23,8 @@ echo "* Create rsyslog.d folder for extra configuration files"
 mkdir -p /opt/local/etc/rsyslog.d
 
 echo "* Adding user and group for zabbix"
-#groupadd zabbix
-#useradd -m -g zabbix zabbix
+groupadd zabbix
+useradd -m -g zabbix zabbix
 
 echo "* Building zabbix-proxy"
 cd ~
