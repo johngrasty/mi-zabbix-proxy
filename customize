@@ -28,7 +28,7 @@ useradd -m -g zabbix zabbix
 
 echo "* Building zabbix-proxy"
 cd ~
-wget http://sourceforge.net/projects/zabbix/files/ZABBIX%20Latest%20Stable/${ZABBIX_VERSION}/zabbix-${ZABBIX_VERSION}.tar.gz/download
+wget http://ggi-uploads.s3.amazonaws.com/zabbix/zabbix-${ZABBIX_VERSION}.tar.gz
 tar -zxvf zabbix-${ZABBIX_VERSION}.tar.gz 
 
 cd zabbix-${ZABBIX_VERSION}
