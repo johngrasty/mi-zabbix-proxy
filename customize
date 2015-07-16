@@ -7,16 +7,19 @@ PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
 # Exit if any commands fail
 set -o errexit
 
+# Variables
+PKGSRC_VERSION='2015Q1'
+
 # Ensure we have updated standard packages
 echo "* Updating standard packages.";
-pkg_delete -v nodejs smtools zoneinit
-pkg_add -v nodejs smtools zoneinit
-npm install smartdc -g
-npm install jsontool -g
-npm install manta -g
+pkgin -y up
+pkgin -y fug
 
 # Configuring image specific packages
 echo "* Configuring image specific packages.";
+
+echo "* Create rsyslog.d folder for extra configuration files"
+mkdir -p /opt/local/etc/rsyslog.d
 
 # Clean up
 echo "* Cleaning up."

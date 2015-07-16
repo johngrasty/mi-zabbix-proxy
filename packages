@@ -1,3 +1,41 @@
 # List packages to add to your image one per line.
+
+## from core guys with modifications
+
+# rsyslog
+rsyslog
+rsyslog-gnutls
+
+# nullmailer
+nullmailer
+
+# spiped
+spiped
+
+# dtrace
 dtracetools
-htop
+
+# logtail
+logcheck
+
+# colorlog
+ccze
+
+# tools
+coreutils
+sudo
+
+# backup
+znapzend
+
+## For zabbix
+iksemel
+libxml2
+net-snmp
+fping
+nmap
+sqlite3
+
+## For build
+gcc47
+gmake

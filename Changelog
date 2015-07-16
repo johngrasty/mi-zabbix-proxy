@@ -1,6 +1,5 @@
 # Changelog for zabbix-proxy
 
-zabbix-proxy-1.0.0
-* Change1
-* Change2
-* etc
+zabbix-proxy-0.1.0
+* Initial attempt
+* Based on [core-base](https://github.com/skylime/mi-core-base/blob/master/customize)
