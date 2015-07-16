@@ -52,7 +52,6 @@ chown zabbix:zabbix /var/db/sqlite/zabbix.db
 echo "* Cleaning up."
 pkgin -y rm gcc47 gmake
 
-rm -rf /root/*
 
 # Prepare image for provisioning
 sm-prepare-image -y
