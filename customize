@@ -49,8 +49,8 @@ chown zabbix:zabbix /var/db/sqlite/zabbix.db
 
 chmod -R 755 /var/zoneinit/includes/*
 chmod -R 755 /opt/core/*
-chmod -R 755  /opt/core/lib/svc/method/*
-chmod -R 755/opt/core/var/mdata-setup/includes/
+chmod -R 755 /opt/core/lib/svc/method/*
+chmod -R 755 /opt/core/var/mdata-setup/includes/*
 
 
 # Clean up
