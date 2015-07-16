@@ -47,11 +47,17 @@ touch /var/log/zabbix_proxy.log
 chown zabbix:zabbix /var/log/zabbix_proxy.log
 chown zabbix:zabbix /var/db/sqlite/zabbix.db
 
+chmod -R 755 /var/zoneinit/includes/*
+chmod -R 755 /opt/core/*
+chmod -R 755  /opt/core/lib/svc/method/*
+chmod -R 755/opt/core/var/mdata-setup/includes/
+
 
 # Clean up
 echo "* Cleaning up."
 pkgin -y rm gcc47 gmake
 
+rm -rf /root/*
 
 # Prepare image for provisioning
 sm-prepare-image -y
