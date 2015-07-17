@@ -10,7 +10,7 @@ if mdata-get zabbix_server 1>/dev/null 2>&1; then
 	echo "ActiveServer=localhost" >> ${ZABBIX_AGENT_CONFD}/server.conf
 	
 	mv /opt/core/var/zabbix/zabbix-proxy.conf ${ZABBIX_PROXY_CONF}
-	
+	cp /opt/core/var/zabbix/zfs.conf ${ZABBIX_AGENT_CONFD}
 	svcadm enable zabbix-agent
 	
 fi

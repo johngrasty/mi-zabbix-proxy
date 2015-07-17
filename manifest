@@ -1,7 +1,7 @@
 name="zabbix-proxy"
 organization="Grastech"
 brand="Instance"
-version="15.1.2"
+version="15.1.3"
 description="A Zabbix proxy"
 homepage="https://github.com/johngrasty/mi-zabbix-proxy"
 users="root admin"
