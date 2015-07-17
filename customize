@@ -45,7 +45,7 @@ sqlite3 /var/db/sqlite/zabbix.db < schema.sql
 echo "* Adding log for zabbix and setting permissions"
 touch /var/log/zabbix_proxy.log
 chown zabbix:zabbix /var/log/zabbix_proxy.log
-chown zabbix:zabbix /var/db/sqlite/zabbix.db
+chown zabbix:zabbix /var/db/sqlite/
 
 chmod -R 755 /var/zoneinit/includes/*
 chmod -R 755 /opt/core/*
