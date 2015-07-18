@@ -39,7 +39,7 @@
         </property_group>
 
         <property_group name="application" type="application">
-            <propval name="config_file" type="astring" value="/opt/zabbix/etc/zabbix_proxyd.conf"/>
+            <propval name="config_file" type="astring" value="/opt/zabbix/etc/zabbix_proxy.conf"/>
         </property_group>
         
         
